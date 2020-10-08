@@ -18,6 +18,13 @@ public class Transaction {
         this.Merchant=Merchant;
         this.UTime=UTime;
     }
+    @Override
+    public String toString() {
+        return "{\"CLIENTPIN\":\"" + ClientPin +
+                "\",\"REQAMT\":" + ReqAmt +
+                ",\"MERCHANT\":\"" + Merchant +
+                "\",\"UTIME\":\"" + UTime + "\"}";
+    }
 
     @JsonAlias("CLIENTPIN")
     @JsonSetter("ClientPin")

@@ -26,10 +26,9 @@ public class TransactionGenerator {
         this.maxValue = 110.0;
         this.deviation = 300;
         this.MerchantValues= new ArrayList<String>();
-        this.MerchantValues.add("first");
-        this.MerchantValues.add("second");
-        this.MerchantValues.add("third");
-        this.MerchantValues.add("fourth");
+        this.MerchantValues.add("E-Commerce");
+        this.MerchantValues.add("Supermarkets");
+        this.MerchantValues.add("Cafe&Restaraunt");
     }
 
     public TransactionGenerator(ArrayList<String> ClientPinValues,
@@ -63,7 +62,7 @@ public class TransactionGenerator {
     }
 
     private String GenerateUtime() {
-        SimpleDateFormat formatter= new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z");
+        SimpleDateFormat formatter= new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         Date date = new Date(System.currentTimeMillis()+deviation);
         return formatter.format(date);
     }
